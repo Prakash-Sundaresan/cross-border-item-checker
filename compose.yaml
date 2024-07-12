@@ -1,0 +1,9 @@
+services:
+  app:
+    restart: unless-stopped
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - mode: ingress
+        target: 3000
