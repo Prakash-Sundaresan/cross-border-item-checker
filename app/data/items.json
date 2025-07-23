@@ -1,0 +1,783 @@
+{
+  "items": [
+    {
+      "id": "apple-fresh",
+      "name": "Fresh Apples",
+      "category": "fruits-vegetables",
+      "aliases": ["apples", "fresh fruit", "apple"],
+      "usaToCanada": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Fresh apples from the US are generally allowed into Canada"
+      },
+      "canadaToUsa": {
+        "status": "restricted",
+        "specialRequirements": ["Must be commercially packaged", "Subject to agricultural inspection"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh fruits may be restricted due to pest concerns - declare all fresh produce"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Food Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Agricultural Items",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "bananas",
+      "name": "Bananas",
+      "category": "fruits-vegetables",
+      "aliases": ["banana", "fresh bananas"],
+      "usaToCanada": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Fresh bananas are generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Must declare all fresh fruits - generally allowed but subject to inspection"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Fresh Produce",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Fresh Fruits",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "citrus-fruits",
+      "name": "Citrus Fruits (Oranges, Lemons, Limes)",
+      "category": "fruits-vegetables",
+      "aliases": ["oranges", "lemons", "limes", "grapefruit", "citrus"],
+      "usaToCanada": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Citrus fruits from the US are generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "restricted",
+        "specialRequirements": ["Must declare all citrus", "Subject to agricultural inspection"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Citrus fruits may carry pests - always declare and subject to inspection"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Citrus Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "USDA APHIS Citrus Regulations",
+          "url": "https://www.aphis.usda.gov/aphis/ourfocus/planthealth/import-information/permits/plants-and-plant-products-permits",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "id": "potatoes",
+      "name": "Fresh Potatoes",
+      "category": "fruits-vegetables",
+      "aliases": ["potato", "potatoes", "fresh potatoes"],
+      "usaToCanada": {
+        "status": "restricted",
+        "specialRequirements": ["Must be commercially packaged", "Must be free of soil"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh potatoes are restricted due to disease concerns - must be clean and packaged"
+      },
+      "canadaToUsa": {
+        "status": "prohibited",
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh potatoes from Canada are generally prohibited due to pest and disease risks"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Potato Restrictions",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Potato Regulations",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "category": "fruits-vegetables",
+      "parentRegulation": "citrus-fruits",
+      "aliases": ["lemons", "fresh lemon", "citrus"],
+      "usaToCanada": {
+        "status": "allowed",
+        "inheritedFrom": "citrus-fruits",
+        "specialRequirements": ["Must be commercially packaged", "Subject to pest inspection"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Subject to citrus fruit regulations"
+      },
+      "canadaToUsa": {
+        "status": "restricted",
+        "inheritedFrom": "citrus-fruits",
+        "specialRequirements": ["Must be from approved regions"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Subject to citrus fruit regulations and pest inspection"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Citrus Regulations",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "meat-fresh",
+      "name": "Fresh Meat (Beef, Pork, Chicken)",
+      "category": "meat-poultry",
+      "aliases": ["meat", "beef", "pork", "chicken", "fresh meat", "raw meat"],
+      "usaToCanada": {
+        "status": "prohibited",
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh, frozen, and dried meat products are prohibited due to disease prevention (BSE, FMD concerns)"
+      },
+      "canadaToUsa": {
+        "status": "prohibited",
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh meat products are prohibited due to disease prevention and USDA regulations"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Meat Restrictions",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Meat and Poultry",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "cooked-meat-commercial",
+      "name": "Commercially Cooked Meat Products",
+      "category": "meat-poultry",
+      "aliases": ["cooked meat", "processed meat", "deli meat", "jerky", "canned meat"],
+      "usaToCanada": {
+        "status": "allowed",
+        "specialRequirements": ["Must be commercially processed", "Must be shelf-stable or canned"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Commercially processed, cooked meat products are generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "restricted",
+        "specialRequirements": ["Must be commercially processed", "Must be from approved facilities"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Some commercially processed meat may be allowed - declare all meat products"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Processed Meat Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "USDA FSIS Import Requirements",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/importing-food-products",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "id": "fish-fresh",
+      "name": "Fresh Fish and Seafood",
+      "category": "seafood",
+      "aliases": ["fish", "seafood", "salmon", "fresh fish", "shellfish", "lobster", "crab"],
+      "usaToCanada": {
+        "status": "allowed",
+        "specialRequirements": ["Must be properly iced or frozen", "Commercial packaging preferred"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh fish and seafood are generally allowed but must be declared"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "specialRequirements": ["Must be properly preserved", "Subject to inspection"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh fish and seafood are allowed but must be declared and may be inspected"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Fish and Seafood",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Fish and Wildlife",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "nuts-tree",
+      "name": "Tree Nuts (Almonds, Walnuts, Pecans)",
+      "category": "nuts-seeds",
+      "aliases": ["nuts", "almonds", "walnuts", "pecans", "tree nuts", "hazelnuts"],
+      "usaToCanada": {
+        "status": "allowed",
+        "specialRequirements": ["Must be shelled or commercially processed"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Processed tree nuts are generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "specialRequirements": ["Must be processed or shelled"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Processed nuts are generally allowed for personal consumption"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Nuts and Seeds",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Agricultural Products",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "category": "nuts-seeds",
+      "aliases": ["peanuts", "groundnuts", "roasted peanuts"],
+      "usaToCanada": {
+        "status": "allowed",
+        "specialRequirements": ["Must be roasted or processed"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Processed peanuts are allowed"
+      },
+      "canadaToUsa": {
+        "status": "restricted",
+        "specialRequirements": ["Must be roasted or commercially processed", "Raw peanuts may be prohibited"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Processed peanuts allowed, raw peanuts may be restricted due to pest concerns"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Peanut Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "USDA APHIS Peanut Regulations",
+          "url": "https://www.aphis.usda.gov/aphis/ourfocus/planthealth/import-information/permits/plants-and-plant-products-permits",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "id": "dairy-milk",
+      "name": "Milk and Liquid Dairy Products",
+      "category": "dairy",
+      "aliases": ["milk", "cream", "liquid dairy", "fresh milk"],
+      "usaToCanada": {
+        "status": "restricted",
+        "specialRequirements": ["Must be commercially packaged", "UHT or shelf-stable preferred"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh milk is restricted, shelf-stable milk products may be allowed"
+      },
+      "canadaToUsa": {
+        "status": "restricted",
+        "specialRequirements": ["Must be commercially processed", "Subject to FDA regulations"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Most liquid dairy products are restricted due to health regulations"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Dairy Restrictions",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "FDA Dairy Import Requirements",
+          "url": "https://www.fda.gov/food/importing-food-products-united-states/importing-dairy-products",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "id": "eggs-fresh",
+      "name": "Fresh Eggs",
+      "category": "dairy",
+      "aliases": ["eggs", "fresh eggs", "chicken eggs"],
+      "usaToCanada": {
+        "status": "prohibited",
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh eggs are prohibited due to disease prevention (avian influenza concerns)"
+      },
+      "canadaToUsa": {
+        "status": "prohibited",
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Fresh eggs are prohibited due to USDA regulations and disease prevention"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Egg Restrictions",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "USDA APHIS Egg Regulations",
+          "url": "https://www.aphis.usda.gov/aphis/ourfocus/animalhealth/animal-and-animal-product-import-information/animal-health-import-requirements",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "category": "food-processed",
+      "aliases": ["honey", "raw honey", "processed honey"],
+      "usaToCanada": {
+        "status": "allowed",
+        "specialRequirements": ["Must be commercially processed"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Commercially processed honey is generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "specialRequirements": ["Must be commercially processed"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Commercially processed honey is allowed for personal consumption"
+      },
+      "lastUpdated": "2025-01-23",
+      "officialSources": [
+        {
+          "name": "CBSA Honey Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Honey Regulations",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "cheese-hard",
+      "name": "Hard Cheese",
+      "category": "food-processed",
+      "aliases": ["cheese", "cheddar", "hard cheese", "aged cheese"],
+      "usaToCanada": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 20,
+          "unit": "kg",
+          "period": "per person"
+        },
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Hard cheeses are generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Most hard cheeses are allowed for personal consumption"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Dairy Products",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "wine",
+      "name": "Wine",
+      "category": "alcohol",
+      "aliases": ["wine", "red wine", "white wine", "alcohol"],
+      "usaToCanada": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 1.5,
+          "unit": "liters",
+          "period": "per person"
+        },
+        "ageRestriction": 19,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Duty-free allowance for visitors staying 48+ hours"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 1,
+          "unit": "liter",
+          "period": "per person"
+        },
+        "ageRestriction": 21,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Must be for personal consumption"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Alcohol Allowances",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/alcohol-alcool-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "CBP Alcohol Guidelines",
+          "url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/prohibited-and-restricted-items",
+          "type": "CBP"
+        }
+      ]
+    },
+    {
+      "id": "beer",
+      "name": "Beer",
+      "category": "alcohol",
+      "aliases": ["beer", "lager", "ale", "alcohol"],
+      "usaToCanada": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 8.5,
+          "unit": "liters",
+          "period": "per person"
+        },
+        "ageRestriction": 19,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Equivalent to 24 cans/bottles (355ml each)"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "ageRestriction": 21,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Must be for personal consumption, reasonable quantities"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Alcohol Allowances",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/alcohol-alcool-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "spirits",
+      "name": "Spirits/Liquor",
+      "category": "alcohol",
+      "aliases": ["spirits", "liquor", "whiskey", "vodka", "rum", "alcohol"],
+      "usaToCanada": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 1.14,
+          "unit": "liters",
+          "period": "per person"
+        },
+        "ageRestriction": 19,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "40 fl oz duty-free allowance"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 1,
+          "unit": "liter",
+          "period": "per person"
+        },
+        "ageRestriction": 21,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Must be for personal consumption"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Alcohol Allowances",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/alcohol-alcool-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "cigarettes",
+      "name": "Cigarettes",
+      "category": "tobacco",
+      "aliases": ["cigarettes", "tobacco", "smokes"],
+      "usaToCanada": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 200,
+          "unit": "cigarettes",
+          "period": "per person"
+        },
+        "ageRestriction": 18,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Duty-free allowance for visitors staying 48+ hours"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 200,
+          "unit": "cigarettes",
+          "period": "per person"
+        },
+        "ageRestriction": 18,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Must be for personal use"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Tobacco Allowances",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/tobacco-tabac-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "cigars",
+      "name": "Cigars",
+      "category": "tobacco",
+      "aliases": ["cigars", "tobacco"],
+      "usaToCanada": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 50,
+          "unit": "cigars",
+          "period": "per person"
+        },
+        "ageRestriction": 18,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Duty-free allowance for visitors staying 48+ hours"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "quantityLimit": {
+          "amount": 100,
+          "unit": "cigars",
+          "period": "per person"
+        },
+        "ageRestriction": 18,
+        "declarationRequired": true,
+        "dutyApplies": true,
+        "notes": "Must be for personal use"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Tobacco Allowances",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/tobacco-tabac-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "laptop",
+      "name": "Laptop Computer",
+      "category": "electronics",
+      "aliases": ["laptop", "computer", "notebook", "electronics"],
+      "usaToCanada": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Personal electronics for temporary use are duty-free"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Personal electronics are generally allowed"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Personal Electronics",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/electronics-electroniques-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "category": "electronics",
+      "aliases": ["phone", "smartphone", "mobile phone", "cell phone", "electronics"],
+      "usaToCanada": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Personal smartphones are duty-free"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Personal smartphones are generally allowed"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Personal Electronics",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/electronics-electroniques-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "prescription-medication",
+      "name": "Prescription Medication",
+      "category": "medications",
+      "aliases": ["prescription", "medication", "medicine", "drugs", "pills"],
+      "usaToCanada": {
+        "status": "allowed",
+        "specialRequirements": ["Must be in original packaging", "Prescription label required", "Reasonable personal supply only"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Must be for personal use with valid prescription"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "specialRequirements": ["Must be in original packaging", "Prescription label required", "90-day supply maximum"],
+        "declarationRequired": true,
+        "dutyApplies": false,
+        "notes": "Must be for personal use with valid prescription"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Medication Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/medication-medicaments-eng.html",
+          "type": "CBSA"
+        },
+        {
+          "name": "FDA Medication Import",
+          "url": "https://www.fda.gov/industry/import-program-food-and-drug-administration-fda/importing-drugs-personal-use",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "id": "otc-medication",
+      "name": "Over-the-Counter Medication",
+      "category": "medications",
+      "aliases": ["otc", "over the counter", "medication", "medicine", "pain reliever", "tylenol", "advil"],
+      "usaToCanada": {
+        "status": "allowed",
+        "specialRequirements": ["Reasonable personal quantities only"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Common OTC medications are generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "specialRequirements": ["Reasonable personal quantities only"],
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Common OTC medications are generally allowed"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Medication Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/medication-medicaments-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    },
+    {
+      "id": "canned-food",
+      "name": "Canned Food",
+      "category": "food-processed",
+      "aliases": ["canned food", "canned goods", "processed food", "tinned food"],
+      "usaToCanada": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Commercially canned foods are generally allowed"
+      },
+      "canadaToUsa": {
+        "status": "allowed",
+        "declarationRequired": false,
+        "dutyApplies": false,
+        "notes": "Commercially processed foods are generally allowed"
+      },
+      "lastUpdated": "2024-01-15",
+      "officialSources": [
+        {
+          "name": "CBSA Processed Food Guidelines",
+          "url": "https://www.cbsa-asfc.gc.ca/travel-voyage/declare-declarer/food-aliments-eng.html",
+          "type": "CBSA"
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "2025-01-23"
+}

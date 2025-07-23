@@ -1,0 +1,75 @@
+{
+  "categories": [
+    {
+      "id": "fruits-vegetables",
+      "name": "Fruits & Vegetables",
+      "description": "Fresh fruits, vegetables, and produce",
+      "icon": "🍎",
+      "itemCount": 4
+    },
+    {
+      "id": "meat-poultry",
+      "name": "Meat & Poultry",
+      "description": "Fresh, processed, and cooked meat products",
+      "icon": "🥩",
+      "itemCount": 2
+    },
+    {
+      "id": "seafood",
+      "name": "Fish & Seafood",
+      "description": "Fresh and processed fish, shellfish, and seafood",
+      "icon": "🐟",
+      "itemCount": 1
+    },
+    {
+      "id": "nuts-seeds",
+      "name": "Nuts & Seeds",
+      "description": "Tree nuts, peanuts, and seed products",
+      "icon": "🥜",
+      "itemCount": 2
+    },
+    {
+      "id": "dairy",
+      "name": "Dairy & Eggs",
+      "description": "Milk products, cheese, eggs, and dairy items",
+      "icon": "🥛",
+      "itemCount": 3
+    },
+    {
+      "id": "food-processed",
+      "name": "Processed Food",
+      "description": "Packaged, canned, and processed food items",
+      "icon": "🥫",
+      "itemCount": 3
+    },
+    {
+      "id": "alcohol",
+      "name": "Alcohol",
+      "description": "Beer, wine, spirits, and alcoholic beverages",
+      "icon": "🍷",
+      "itemCount": 3
+    },
+    {
+      "id": "tobacco",
+      "name": "Tobacco",
+      "description": "Cigarettes, cigars, and tobacco products",
+      "icon": "🚬",
+      "itemCount": 2
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Electronic devices and equipment",
+      "icon": "📱",
+      "itemCount": 2
+    },
+    {
+      "id": "medications",
+      "name": "Medications",
+      "description": "Prescription and over-the-counter medications",
+      "icon": "💊",
+      "itemCount": 2
+    }
+  ],
+  "lastUpdated": "2025-01-23"
+}

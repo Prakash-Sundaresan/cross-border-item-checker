@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "id": "food-fresh",
+      "name": "Fresh Food",
+      "description": "Fresh fruits, vegetables, and perishable items",
+      "icon": "🍎",
+      "itemCount": 4
+    },
+    {
+      "id": "alcohol",
+      "name": "Alcohol",
+      "description": "Beer, wine, spirits, and alcoholic beverages",
+      "icon": "🍷",
+      "itemCount": 3
+    },
+    {
+      "id": "tobacco",
+      "name": "Tobacco",
+      "description": "Cigarettes, cigars, and tobacco products",
+      "icon": "🚬",
+      "itemCount": 2
+    },
+    {
+      "id": "food-processed",
+      "name": "Processed Food",
+      "description": "Packaged, canned, and processed food items",
+      "icon": "🥫",
+      "itemCount": 2
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Electronic devices and equipment",
+      "icon": "📱",
+      "itemCount": 2
+    },
+    {
+      "id": "medications",
+      "name": "Medications",
+      "description": "Prescription and over-the-counter medications",
+      "icon": "💊",
+      "itemCount": 2
+    }
+  ],
+  "lastUpdated": "2024-01-15"
+}

@@ -1,9 +1,104 @@
+version: '3.8'
+
 services:
-  app:
-    restart: unless-stopped
+  # Next.js Application Service
+  web:
     build:
       context: ./app
       dockerfile: Dockerfile
+    container_name: cross-border-checker-web
+    restart: unless-stopped
     ports:
-      - mode: ingress
-        target: 3000
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    depends_on:
+      - nginx
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Nginx Reverse Proxy Service
+  nginx:
+    image: nginx:alpine
+    container_name: cross-border-checker-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - ./nginx/logs:/var/log/nginx
+    depends_on:
+      - web
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Data Service (for serving static JSON files)
+  data-service:
+    image: nginx:alpine
+    container_name: cross-border-checker-data
+    restart: unless-stopped
+    volumes:
+      - ./app/data:/usr/share/nginx/html/data:ro
+      - ./nginx/data-nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/data/items.json"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Monitoring Service (Optional)
+  monitoring:
+    image: prom/prometheus:latest
+    container_name: cross-border-checker-monitoring
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    networks:
+      - app-network
+
+  # Log Aggregation Service (Optional)
+  logs:
+    image: fluent/fluent-bit:latest
+    container_name: cross-border-checker-logs
+    restart: unless-stopped
+    volumes:
+      - ./logging/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf:ro
+      - ./nginx/logs:/var/log/nginx:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+    name: cross-border-network
+
+volumes:
+  prometheus-data:
+    driver: local
